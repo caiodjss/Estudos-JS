@@ -1,6 +1,6 @@
 # Ignorar o diretório .assets/
 /assets/
 
-!extensios.json
-!settings.json
-!style.css
+extensios.json
+settings.json
+style.css
