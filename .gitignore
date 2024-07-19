@@ -1,7 +1,6 @@
 # Ignorar o diretório .assets/
-.assets/
+/assets/
 
-# Incluir os arquivos especificados no controle de versão
 !extensios.json
 !settings.json
 !style.css
