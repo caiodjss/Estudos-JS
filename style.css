@@ -40,16 +40,6 @@ body * {
   padding: 0 24px;
 }
 
-#div-welcome {
-  text-align: justify;
-}
-
-#texto p{
-  text-align: center;
-  font-size: larger;
-  font-weight: 500;
-}
-
 /* Profile */
 #profile {
   text-align: center;
