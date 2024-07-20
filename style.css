@@ -41,8 +41,8 @@ body * {
 }
 
 #texto {
-  width: 550px;
-  margin: 56px auto 0px;
+  /*width: 550px;
+  margin: 56px auto 0px;*/
   padding: 8 24px;
   text-align: justify;
   font-size: 15px;
