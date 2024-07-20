@@ -3,7 +3,6 @@
   padding: 0px;
   box-sizing: border-box;
 }
-
 :root {
   --text-color: white;
   --bg-url: url(./assets/bg-mobile.jpg);
@@ -13,7 +12,6 @@
   --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/moon-stars.svg);
 }
-
 .light {
   --text-color: black;
   --bg-url: url(./assets/bg-mobile-light.jpg);
@@ -23,19 +21,14 @@
   --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/sun.svg);
 }
-
 body {
   /* background color image repeat position/size */
-  background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
   background: var(--bg-url) no-repeat top center/cover;
 }
-
 body * {
   font-family: "Inter", sans-serif;
-  color: #fff;
   color: var(--text-color);
 }
-
 #container {
   width: 360px;
   margin: 56px auto 0px;
@@ -45,6 +38,8 @@ body * {
 #texto {
   width: 550px;
   margin: 56px auto 0px;
+  /*width: 550px;
+  margin: 56px auto 0px;*/
   padding: 8 24px;
   text-align: justify;
   font-size: 15px;
@@ -54,25 +49,29 @@ body * {
   font-weight: 500;
   font-size: larger;
 }
-
 #escala-notas {
   text-align: center;
   padding: 8 24px;
 }
-
 /* Profile */
 #profile {
   text-align: center;
   padding: 24px;
 }
-  
+#profile img {
+  width: 112px;
+}
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
 /* Switch */
 #switch {
   position: relative;
   width: 64px;
   margin: 4px auto;
 }
-
 #switch button {
   width: 32px;
   height: 32px;
@@ -85,12 +84,10 @@ body * {
   z-index: 1;
   transform: translateY(-50%);
 }
-
 .light #switch button {
   right: 0;
   left: initial;
 }
-
 #switch span {
   display: block;
   width: 64px;
@@ -101,7 +98,6 @@ body * {
   -webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
 }
-
 /* Links da Lista*/
 ul {
   list-style: none;
@@ -110,7 +106,6 @@ ul {
   gap: 16px;
   padding: 24px 0;
 }
-
 ul li a {
   display: flex;
   justify-content: center;
@@ -130,9 +125,7 @@ ul li a:hover {
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
 }
-
 /* Social-Links*/
-
 #social-links {
   display: flex;
   justify-content: center;
@@ -147,11 +140,9 @@ ul li a:hover {
   transition: background 0.2px;
   border-radius: 50%;
 }
-
 #social-links a:hover {
   background: var(--highlight-color);
 }
-
 footer {
   padding: 24px 0;
   text-align: center;
