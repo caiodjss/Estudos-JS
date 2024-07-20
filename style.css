@@ -40,20 +40,12 @@ body * {
   padding: 0 24px;
 }
 
-#texto {
+#div-container {
   text-align: justify;
   margin: 0 auto;
   font-size: 15px;
-}
-#texto p {
-  text-align: center;
   font-weight: 400;
   font-size: larger;
-}
-
-#escala-notas {
-  /*text-align: center;*/
-}
 
 /* Profile */
 #profile {
