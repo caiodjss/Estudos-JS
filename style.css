@@ -41,21 +41,18 @@ body * {
 }
 
 #texto {
-  /*width: 550px;
-  margin: 56px auto 0px;*/
   padding: 8 24px;
   text-align: justify;
   font-size: 15px;
 }
 #texto p {
   text-align: center;
-  font-weight: 500;
+  font-weight: 400;
   font-size: larger;
 }
 
 #escala-notas {
   text-align: center;
-  padding: 8 24px;
 }
 
 /* Profile */
