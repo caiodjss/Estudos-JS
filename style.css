@@ -40,6 +40,14 @@ body * {
   padding: 0 24px;
 }
 
+/* Welcome */
+#texto p{
+font-size: large;
+font-weight: 500;
+text-align: justify;
+  
+}
+
 /* Profile */
 #profile {
   text-align: center;
