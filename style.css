@@ -41,13 +41,20 @@ body * {
 }
 
 /* Welcome */
+#texto{
+  text-align: justify;
+
 #texto p{
-font-size: large;
-font-weight: 500;
-text-align: justify;
-  
+  font-size: large;
+  font-weight: 500;
+  text-align: justify;
+  width: 500px;
 }
 
+#escala-notas{
+  text-align: center;
+}
+  
 /* Profile */
 #profile {
   text-align: center;
