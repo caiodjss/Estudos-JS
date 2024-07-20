@@ -41,13 +41,13 @@ body * {
 }
 
 #div-welcome {
-  text-align: center-justify;
-  font-size: 15px;
-  font-weight: 400;
+  text-align: justify;
 }
 
 #texto p{
+  text-align: center;
   font-size: larger;
+  font-weight: 500;
 }
 
 /* Profile */
