@@ -41,10 +41,12 @@ body * {
 }
 
 #div-welcome {
-  text-align: justify;
-  margin: 0 auto;
+  text-align: center-justify;
   font-size: 15px;
   font-weight: 400;
+}
+
+#texto p{
   font-size: larger;
 }
 
