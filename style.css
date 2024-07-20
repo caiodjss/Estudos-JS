@@ -41,8 +41,8 @@ body * {
 }
 
 #texto {
-  padding: 8 24px;
   text-align: justify;
+  margin: 0 auto;
   font-size: 15px;
 }
 #texto p {
@@ -52,7 +52,7 @@ body * {
 }
 
 #escala-notas {
-  text-align: center;
+  /*text-align: center;*/
 }
 
 /* Profile */
