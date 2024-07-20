@@ -39,29 +39,20 @@ body * {
   display: inline;
   width: 360px;
   margin: 56px auto 0px;
-<<<<<<< HEAD
-=======
-  /*width: 550px;
-  margin: 56px auto 0px;*/
   padding: 8 24px;
-  text-align: justify;
+  text-align: center;
   font-size: 15px;
 }
-#texto p {
->>>>>>> 054dc243998c89c9b516d9f4f2dd65a513563719
-  text-align: center;
-}
-<<<<<<< HEAD
 
 #texto p {
   list-style: none;
   font-size: larger;
   font-weight: 500;
-=======
+}
+
 #escala-notas {
   text-align: center;
   padding: 8 24px;
->>>>>>> 054dc243998c89c9b516d9f4f2dd65a513563719
 }
 /* Profile */
 #profile {
