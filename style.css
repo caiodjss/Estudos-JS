@@ -108,7 +108,7 @@ ul li a {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   text-decoration: none;
-  font-weight: 500px;
+  font-weight: 500;
   transition: background 0.2s;
 }
 /* pseudo-selector*/
@@ -128,7 +128,7 @@ ul li a:hover {
   align-items: center;
   justify-content: center;
   padding: 16px;
-  transition: background 0.2px;
+  transition: background 0.2s;
   border-radius: 50%;
 }
 #social-links a:hover {
@@ -169,7 +169,8 @@ footer {
 }
 
 /* Estiliza os campos de entrada e seleção */
-input[type="text"], input[type="date"], select {
+input[type="text"], input[type="date"], input[type="tel"], select {
+  --text-color: rgb(0, 0, 0);
   border: 2px solid #ccc;
   padding: 8px;
   border-radius: 4px;
@@ -180,10 +181,10 @@ input[type="text"], input[type="date"], select {
 }
 
 /* Estiliza o estado do foco para os campos de entrada e seleção */
-input[type="text"]:focus, input[type="date"]:focus, select:focus {
-  border-color:  #015814;
-  background-color:   #015814;
-  outline: none; 
+input[type="text"]:focus, input[type="tel"]:focus, select:focus {
+  border-color: #ccc;
+  background-color: #ffffff;
+  outline: none;
 }
 
 /* Estiliza o placeholder nos campos de entrada */
@@ -193,7 +194,7 @@ input::placeholder {
 
 /* Estiliza o botão de envio */
 input[type="submit"] {
-  background-color: #015814; 
+  background-color: #025f16; 
   color: white; 
   border: none;
   padding: 10px 20px;

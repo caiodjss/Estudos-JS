@@ -12,46 +12,86 @@
     <title>Formulário de Convite</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            fetch('atletas.txt')
-                .then(response => response.text())
-                .then(data => {
-                    const names = data.split('\n').filter(name => name.trim() !== '');
-                    const select = document.getElementById('Atleta-Baba');
-                    names.forEach(name => {
-                        const option = document.createElement('option');
-                        option.value = name.trim();
-                        option.textContent = name.trim();
-                        select.appendChild(option);
-                    });
-                })
-                .catch(error => {
-                    console.error('Erro ao carregar nomes:', error);
-                });
-        });
-    </script>
+      document.addEventListener('DOMContentLoaded', function () {
+          fetch('atletas.txt')
+              .then(response => response.text())
+              .then(data => {
+                  const names = data.split('\n').filter(name => name.trim() !== '');
+                  const select = document.getElementById('Atleta-Baba');
+                  names.forEach(name => {
+                      const option = document.createElement('option');
+                      option.value = name.trim();
+                      option.textContent = name.trim();
+                      select.appendChild(option);
+                  });
+              })
+              .catch(error => {
+                  console.error('Erro ao carregar nomes:', error);
+              });
+      });
+
+      document.addEventListener('DOMContentLoaded', function () {
+          const form = document.getElementById('formulario');
+          form.addEventListener('submit', function (e) {
+              e.preventDefault(); // Impede o envio padrão do formulário
+
+              const formData = new FormData(this);
+
+              fetch('send_email.php', {
+                  method: 'POST',
+                  body: formData
+              })
+              .then(response => response.text())
+              .then(result => {
+                  document.getElementById('mensagem').innerText = 'Solicitação enviada!';
+                  document.getElementById('mensagem').style.display = 'block';
+
+                  // Limpa o formulário
+                  this.reset();
+              })
+              .catch(error => {
+                  document.getElementById('mensagem').innerText = 'Falha ao enviar o formulário.';
+                  document.getElementById('mensagem').style.display = 'block';
+              });
+          });
+      });
+  </script>
 </head>
 <body style="display: flex; text-align: center; min-height: 100vh; flex-direction: column; width: 100%; max-width: 588px; margin: 56px auto 0px; padding: 0% 24px;">
-  <h1>Formulário de Convite <br><br></h1>
-  <form action="mailto:cdj@outlook.com.br" method="post" enctype="text/plain">
-      <label for="Convidado">Nome do convidado:<br></label><br>
+    <div id="profile">
+      <img src="./assets/avatar.png" alt="Logo Legado Baba Europeu 2018" />
+      <p>@babaeuropeu</p>
+    </div>
+
+    <div id="switch" onclick="toggleMode()">
+      <button></button>
+      <span></span>
+    </div>
+    
+    <h1>Formulário de Convite<br></h1>
+    <form id="formulario" action="send_email.php" method="post" enctype="application/x-www-form-urlencoded">
+      <label for="Convidado">Nome do convidado:<br></label>
       <input type="text" id="Convidado" name="Convidado" required><br><br>
 
-      <label for="Atleta-Baba"><br>Nome de quem convidou: <br></label><br>
+      <label for="Atleta-Baba">Nome de quem convidou: <br></label>
       <select id="Atleta-Baba" name="Atleta-Baba" required>
       </select><br><br>
 
-      <label for="data-convite"><br>Data do Baba:<br></label><br>
+      <label for="wpp-convidado">WhatsApp <br></label>
+      <input type="tel" id="wpp-convidado" name="wpp-convidado" pattern="[0-9]{2}[0-9]{5}[0-9]{4}" placeholder="DD XXXXX-XXXX" required><br><br>
+
+      <label for="data-convite">Data do Baba:<br></label>
       <input type="date" id="data-convite" name="data-convite" required><br><br>
 
-      <label for="taxa-extra"><br>Está de acordo com a taxa de 10 reais?<br></label><br>
+      <label for="taxa-extra">Está de acordo com a taxa de 10 reais?<br></label>
       <select id="taxa-extra" name="taxa-extra" required>
           <option value="sim">Sim</option>
           <option value="nao">Não</option>
-      </select><br><br><br>
+      </select><br><br>
 
       <input type="submit" value="Por o nome na lista">
-  </form>
+</form>
+<div id="mensagem"></div>
 
   <div id="social-links">
     <a
