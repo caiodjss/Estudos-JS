@@ -39,29 +39,6 @@ body * {
   padding: 0 24px;
 }
 
-#div-welcome {
-  display: inline;
-  width: 100%;
-  max-width: 588px;
-  margin: 56px auto 0px;
-  padding: 24px;
-  margin-top: 8px;
-  line-height: 24px;
-  text-align: center;
-  font-size: 15px;
-}
-
-#texto p {
-  list-style: none;
-  font-size: larger;
-  font-weight: 500;
-}
-
-#escala-notas {
-  text-align: center;
-  margin-top: 8px;
-  padding: 8 24px;
-}
 /* Profile */
 #profile {
   text-align: center;
@@ -190,3 +167,5 @@ footer {
     left: 0;
   }
 }
+
+/* Janela Welcome */
