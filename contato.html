@@ -1,16 +1,98 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
+<html lang="pt-BR">
+<head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contato</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body></body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Convite</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('atletas.txt')
+                .then(response => response.text())
+                .then(data => {
+                    const names = data.split('\n').filter(name => name.trim() !== '');
+                    const select = document.getElementById('Atleta-Baba');
+                    names.forEach(name => {
+                        const option = document.createElement('option');
+                        option.value = name.trim();
+                        option.textContent = name.trim();
+                        select.appendChild(option);
+                    });
+                })
+                .catch(error => {
+                    console.error('Erro ao carregar nomes:', error);
+                });
+        });
+    </script>
+</head>
+<body style="display: flex; text-align: center; min-height: 100vh; flex-direction: column; width: 100%; max-width: 588px; margin: 56px auto 0px; padding: 0% 24px;">
+  <h1>Formulário de Convite <br><br></h1>
+  <form action="mailto:cdj@outlook.com.br" method="post" enctype="text/plain">
+      <label for="Convidado">Nome do convidado:<br></label><br>
+      <input type="text" id="Convidado" name="Convidado" required><br><br>
+
+      <label for="Atleta-Baba"><br>Nome de quem convidou: <br></label><br>
+      <select id="Atleta-Baba" name="Atleta-Baba" required>
+      </select><br><br>
+
+      <label for="data-convite"><br>Data do Baba:<br></label><br>
+      <input type="date" id="data-convite" name="data-convite" required><br><br>
+
+      <label for="taxa-extra"><br>Está de acordo com a taxa de 10 reais?<br></label><br>
+      <select id="taxa-extra" name="taxa-extra" required>
+          <option value="sim">Sim</option>
+          <option value="nao">Não</option>
+      </select><br><br><br>
+
+      <input type="submit" value="Por o nome na lista">
+  </form>
+
+  <div id="social-links">
+    <a
+      href="https://play.google.com/store/apps/details?id=app.chegamais.com.chegamais"
+      target="_blank"
+      ><ion-icon name="logo-google-playstore"></ion-icon
+    ></a>
+
+    <a href="https://instagram.com/babaeuropeu" target="_blank"
+      ><ion-icon name="logo-instagram"></ion-icon>
+    </a>
+    <a href="https://youtube.com/@babaeuropeu6979" target="_blank">
+      <ion-icon name="logo-youtube"></ion-icon>
+    </a>
+
+    <a
+      href="https://drive.google.com/drive/folders/1-Y7JlOJ66qIJEN0w7faHMyp7pttqyt25?usp=drive_link"
+      target="_blank"
+    >
+      <ion-icon name="document-text-outline"></ion-icon>
+    </a>
+  </div>
+  <div class="mapa-conteudo">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.156974120068!2d-38.46610802450989!3d-12.961805359613228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b8c2269040f%3A0xa0741424247f583a!2sConfedera%C3%A7%C3%A3o%20Baba%20Europeu!5e0!3m2!1spt-BR!2sbr!4v1721503796701!5m2!1spt-BR!2sbr"
+      width="100%"
+      height="315"rameborder="0" style="border: 0;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+    ></iframe>
+  </div>
+  <footer>
+    <p class="copyright">&copy; Feito com 💚 pela <a href="https://caiodjss.github.io/bratso/" target="_blank">Brátso</a></p>
+  </footer>
+
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+  <script src="script.js"></script>
+</body>
 </html>
