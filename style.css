@@ -168,7 +168,6 @@ footer {
   }
 }
 
-/* Estiliza os campos de entrada e seleção */
 input[type="text"], input[type="date"], input[type="tel"], select {
   --text-color: rgb(0, 0, 0);
   border: 2px solid #ccc;
@@ -180,19 +179,16 @@ input[type="text"], input[type="date"], input[type="tel"], select {
   transition: border-color 0.3s, background-color 0.3s;
 }
 
-/* Estiliza o estado do foco para os campos de entrada e seleção */
 input[type="text"]:focus, input[type="tel"]:focus, select:focus {
   border-color: #ccc;
   background-color: #ffffff;
   outline: none;
 }
 
-/* Estiliza o placeholder nos campos de entrada */
 input::placeholder {
   color: #999;
 }
 
-/* Estiliza o botão de envio */
 input[type="submit"] {
   background-color: #025f16; 
   color: white; 
@@ -204,7 +200,6 @@ input[type="submit"] {
   transition: background-color 0.3s;
 }
 
-/* Estiliza o botão de envio no estado de foco */
 input[type="submit"]:hover {
   background-color: #060479;
 }
