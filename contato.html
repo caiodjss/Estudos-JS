@@ -35,29 +35,6 @@
                 formData.forEach((value, key) => {
                     data[key] = value;
                 });
-
-                fetch('https://script.google.com/macros/library/d/1VluWssG0qHvKQ4vGKsuEK26uBb8A--U88QDswa-DgNHGJ2gdOGn5Zwcs/4', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                })
-                .then(response => response.json())
-                .then(result => {
-                    if (result.result === 'success') {
-                        document.getElementById('mensagem').innerText = 'Dados enviados com sucesso!';
-                    } else {
-                        document.getElementById('mensagem').innerText = 'Erro ao enviar dados.';
-                    }
-                    document.getElementById('mensagem').style.display = 'block';
-                })
-                .catch(error => {
-                    console.error('Erro ao enviar dados:', error);
-                    document.getElementById('mensagem').innerText = 'Erro ao enviar dados.';
-                    document.getElementById('mensagem').style.display = 'block';
-                });
-
                 this.reset();
             });
         });
